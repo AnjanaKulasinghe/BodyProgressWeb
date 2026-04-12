@@ -20,14 +20,14 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     // Add shadow when scrolled
     if (currentScroll > 100) {
         navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
     } else {
         navbar.style.boxShadow = 'none';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -49,7 +49,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements that should fade in
 document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.feature-card, .step, .about-feature');
-    
+
     fadeElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -75,11 +75,11 @@ const trackDownload = (platform) => {
 document.addEventListener('DOMContentLoaded', () => {
     const appleBtn = document.querySelector('.download-btn.apple');
     const androidBtn = document.querySelector('.download-btn.android');
-    
+
     if (appleBtn) {
         appleBtn.addEventListener('click', () => trackDownload('iOS'));
     }
-    
+
     if (androidBtn && !androidBtn.classList.contains('disabled')) {
         androidBtn.addEventListener('click', () => trackDownload('Android'));
     }
