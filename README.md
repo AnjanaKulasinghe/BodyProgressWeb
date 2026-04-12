@@ -1,102 +1,107 @@
 # Body Progress - Marketing Website
 
-A modern, responsive marketing website for the Body Progress app - your body transformation tracking companion.
+Modern, responsive marketing website for the Body Progress app - your body transformation tracking companion.
 
-## 🎨 Features
+**Live Site**: [bodyprogress.koungasolutions.co.nz](https://bodyprogress.koungasolutions.co.nz)
+
+## Features
 
 - **Modern Design**: Dark-mode first design matching the app's aesthetic
-- **Fully Responsive**: Works beautifully on desktop, tablet, and mobile
-- **Fast & Lightweight**: Pure HTML, CSS, and vanilla JavaScript - no frameworks
-- **GitHub Pages Ready**: Static site optimized for easy deployment
-- **SEO Optimized**: Meta tags, semantic HTML, and proper structure
-- **Smooth Animations**: Subtle animations that enhance user experience
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Fast & Lightweight**: Pure HTML, CSS, and vanilla JavaScript
+- **GitHub Pages Ready**: Static site optimized for deployment
+- **SEO Optimized**: Meta tags, semantic HTML, sitemap
+- **Smooth Animations**: Subtle interactions that enhance UX
 
-## 🚀 Deployment Options
-
-### Option 1: GitHub Pages (Recommended)
-
-1. **Create a new repository** (or use existing one):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Body Progress website"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/bodyprogress-web.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**:
-   - Go to repository Settings > Pages
-   - Source: Deploy from a branch
-   - Branch: `main` / `root`
-   - Click Save
-
-3. **Your site will be live at**: `https://YOUR_USERNAME.github.io/bodyprogress-web/`
-
-### Option 2: Custom Domain (koungasolutions.co.nz/bodyprogress)
-
-Since you want to host under your existing domain, you have two options:
-
-#### A) Subdomain Approach (Recommended)
-Create a subdomain: `bodyprogress.koungasolutions.co.nz`
-
-**DNS Setup:**
-```
-Type: CNAME
-Name: bodyprogress
-Value: YOUR_USERNAME.github.io
-```
-
-**GitHub Pages Setup:**
-1. In your repository settings > Pages
-2. Add custom domain: `bodyprogress.koungasolutions.co.nz`
-3. Create a file named `CNAME` in your repository with:
-   ```
-   bodyprogress.koungasolutions.co.nz
-   ```
-
-#### B) Subdirectory Approach
-Host under: `koungasolutions.co.nz/bodyprogress`
-
-This requires more server setup depending on your hosting provider.
-
-**If using GitHub Pages with subdirectory:**
-1. Update all asset paths in index.html to be relative
-2. Set up redirects on your main domain server to proxy requests
-
-**If your main site is also on GitHub:**
-1. Add this website to a `bodyprogress/` folder in your main repo
-2. Link to it from your main navigation
-
-### Option 3: Netlify (Alternative - Super Easy)
-
-1. **Drag & Drop Deployment**:
-   - Go to [Netlify](https://netlify.com)
-   - Drag the entire folder
-   - Get instant live URL
-
-2. **Custom Domain**:
-   - Domain settings > Add custom domain
-   - Point DNS: `CNAME bodyprogress → YOUR_NETLIFY_URL`
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 BodyProgressWeb/
-├── index.html          # Main HTML file
-├── styles.css          # Stylesheet with app's branding
-├── script.js           # JavaScript for interactions
-├── README.md           # This file
-└── CNAME              # (Create this for custom domain)
+├── assets/
+│   ├── css/
+│   │   └── styles.css       # Main stylesheet
+│   ├── js/
+│   │   └── script.js        # Interactive behaviors
+│   ├── images/
+│   │   ├── app-icon.png     # App icon (1024x1024)
+│   │   ├── app-icon-512.png # App icon (512x512)
+│   │   └── favicon.svg      # Favicon
+│   └── screens/
+│       ├── 0-4.jpeg         # App screenshots
+│       └── Video.mp4        # Demo video
+├── index.html              # Main landing page
+├── privacy.html            # Privacy policy page
+├── 404.html                # Custom 404 error page
+├── manifest.json           # PWA manifest
+├── sitemap.xml             # SEO sitemap
+├── robots.txt              # Search engine directives
+├── CNAME                   # Custom domain config
+├── DEPLOYMENT.md           # Detailed deployment guide
+└── README.md               # This file
 ```
 
-## 🎨 Customization
+## Quick Start
 
-### Colors
-The website uses Body Progress app's exact color scheme:
-- Primary: `#FF6B35` (coral-orange)
-- Secondary: `#1B98E0` (professional blue)
-- Accent: `#FF9F1C` (warm gold)
+### Local Development
+
+1. Clone or download this repository
+2. Open `index.html` in your browser
+3. Edit files and refresh to see changes
+
+No build process or dependencies required!
+
+### Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions on:
+- GitHub Pages deployment
+- Custom domain configuration
+- DNS setup
+- Troubleshooting
+
+Quick deploy:
+```bash
+./deploy.sh
+```
+
+## Customization
+
+### Brand Colors
+```css
+--brand-primary: #FF6B35   /* Coral orange */
+--brand-secondary: #1B98E0 /* Professional blue */
+--brand-accent: #FF9F1C    /* Warm gold */
+```
+
+### Typography
+- Font: Nunito (matches the app)
+- Weights: 400, 500, 600, 700, 800
+
+### Key Sections
+1. **Hero** - Main call-to-action with app screenshots
+2. **Features** - Core functionality showcase
+3. **Video Showcase** - Interactive comparison demo
+4. **Download** - iOS (Live) and Android (Beta) links
+5. **Privacy** - Comprehensive privacy policy
+
+## App Store Links
+
+- **iOS**: [App Store](https://apps.apple.com/nz/app/body-progress/id6751845352)
+- **Android**: [Beta Testing](https://play.google.com/apps/testing/com.koungagames.body_progress)
+
+## Technologies
+
+- HTML5
+- CSS3 (Grid, Flexbox, Animations)
+- Vanilla JavaScript (ES6+)
+- Google Fonts (Nunito)
+
+## License
+
+© 2026 Kounga Games. All rights reserved.
+
+## Contact
+
+For questions or support: info@koungasolutions.co.nz
 
 To modify, edit CSS variables in `styles.css`:
 ```css
@@ -134,7 +139,7 @@ To track visitors, add your analytics code to `index.html` before `</head>`:
 <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
 ```
 
-## 🔧 Development
+## Development
 
 To test locally:
 
@@ -153,7 +158,7 @@ To test locally:
    - Install "Live Server" extension
    - Right-click `index.html` > "Open with Live Server"
 
-## 📱 Mobile Testing
+## Mobile Testing
 
 The site is fully responsive. Test on different devices:
 - Desktop: 1920px and above
@@ -161,7 +166,7 @@ The site is fully responsive. Test on different devices:
 - Tablet: 768px - 1365px
 - Mobile: Below 768px
 
-## ✅ Pre-launch Checklist
+## Pre-launch Checklist
 
 Before going live:
 - [ ] Update all links (App Store, Google Play, beta testing)
@@ -174,14 +179,14 @@ Before going live:
 - [ ] Verify custom domain DNS settings
 - [ ] Enable HTTPS (automatic with GitHub Pages)
 
-## 🔐 HTTPS & Security
+## HTTPS & Security
 
 GitHub Pages automatically provides HTTPS. For custom domains:
 1. Add your domain in GitHub Pages settings
 2. Wait for DNS propagation (can take 24-48 hours)
 3. Enable "Enforce HTTPS" in repository settings
 
-## 📊 Adding App Screenshots (Optional)
+## Adding App Screenshots (Optional)
 
 To showcase the app with actual screenshots:
 
@@ -192,18 +197,14 @@ To showcase the app with actual screenshots:
    <img src="images/screenshot.png" alt="App Screenshot">
    ```
 
-## 🤝 Support & Maintenance
+## Support & Maintenance
 
 - **Update Beta Links**: When Android goes live, update the download section
 - **App Updates**: Keep feature descriptions in sync with app updates
 - **Content Updates**: All content is in HTML - easy to edit
 
-## 📞 Contact
+## Contact
 
 For questions about hosting or deployment:
 - Check your domain registrar's DNS documentation
 - GitHub Pages docs: https://docs.github.com/pages
-
----
-
-Built with ❤️ for Body Progress users
