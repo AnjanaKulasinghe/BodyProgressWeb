@@ -327,8 +327,8 @@ html {
     background: var(--bg-card);
     padding: var(--spacing-xs) var(--spacing-md);
     border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 0.775rem;
+    font-weight: 500;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: inline-flex;
     align-items: center;
