@@ -101,7 +101,7 @@ Quick deploy:
 
 ## Contact
 
-For questions or support: info@koungasolutions.co.nz
+For questions or support: bodyProgress@koungasolutions.co.nz
 
 To modify, edit CSS variables in `styles.css`:
 ```css
